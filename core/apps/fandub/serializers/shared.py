@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..models import BannerModel, GenreModel
+from ..models import BannerModel, GenreModel, CommentModel
 
 
 class BannerSerializer(serializers.ModelSerializer):
@@ -22,4 +22,13 @@ class GenreSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "name",
+        ]
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CommentModel
+        fields = [
+            "id",
+            "text",
         ]

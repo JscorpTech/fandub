@@ -1,6 +1,7 @@
 from django.db import models
 from core.http.models import AbstractBaseModel
 from django.utils.translation import gettext_lazy as _
+from core.http.models import User
 
 
 class BannerModel(AbstractBaseModel):
@@ -39,3 +40,16 @@ class DirectorModel(AbstractBaseModel):
     class Meta:
         verbose_name = _("DirectorModel")
         verbose_name_plural = _("DirectorModel")
+
+
+class CommentModel(AbstractBaseModel):
+    text = models.CharField(_("text"), max_length=255)
+    film = models.ForeignKey("FilmModel", on_delete=models.CASCADE, blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.text
+
+    class Meta:
+        verbose_name = _("CommentModel")
+        verbose_name_plural = _("CommentModel")
