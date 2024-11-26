@@ -1,6 +1,7 @@
-from django.urls import path, include
-from .views import BannerView, GenreView, CategoryView, FilmView, CommentView
+from django.urls import include, path
 from rest_framework.routers import DefaultRouter
+
+from .views import BannerView, CategoryView, CommentView, FilmView, GenreView
 
 app_name = "fandub"
 

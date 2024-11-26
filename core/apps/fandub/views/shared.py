@@ -1,11 +1,13 @@
-from rest_framework.viewsets import ReadOnlyModelViewSet, GenericViewSet
-from rest_framework.permissions import AllowAny, IsAuthenticated
-from ..models import BannerModel, GenreModel, CommentModel
-from ..serializers import BannerSerializer, GenreSerializer, CommentSerializer
-from ..permissions import CommentPermission
-from rest_framework.mixins import CreateModelMixin, UpdateModelMixin, DestroyModelMixin
 from rest_framework.decorators import action
+from rest_framework.mixins import CreateModelMixin, DestroyModelMixin, UpdateModelMixin
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.viewsets import GenericViewSet, ReadOnlyModelViewSet
+
 from core.http.paginations import CustomPagination
+
+from ..models import BannerModel, CommentModel, GenreModel
+from ..permissions import CommentPermission
+from ..serializers import BannerSerializer, CommentSerializer, GenreSerializer
 
 
 class BannerView(ReadOnlyModelViewSet):

@@ -3,9 +3,10 @@ from datetime import datetime, timedelta
 
 from django.contrib.auth import models as auth_models
 from django.db import models
-from .base import AbstractBaseModel
 
 from core.http import choices, managers
+
+from .base import AbstractBaseModel
 
 
 class User(auth_models.AbstractUser):

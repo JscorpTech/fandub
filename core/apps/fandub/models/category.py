@@ -1,6 +1,7 @@
 from django.db import models
-from core.http.models import AbstractBaseModel
 from django.utils.translation import gettext_lazy as _
+
+from core.http.models import AbstractBaseModel
 
 
 class CategoryModel(AbstractBaseModel):

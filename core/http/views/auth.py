@@ -1,7 +1,7 @@
 from typing import Type
 
 from django.utils.translation import gettext as _
-from rest_framework import permissions, request, throttling, views, response
+from rest_framework import permissions, request, response, throttling, views
 
 from core import services
 from core.http import serializers

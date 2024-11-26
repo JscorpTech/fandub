@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from ..models import BannerModel, GenreModel, CommentModel
+
+from ..models import BannerModel, CommentModel, GenreModel
 
 
 class BannerSerializer(serializers.ModelSerializer):

@@ -1,10 +1,10 @@
 from django.test import TestCase
-from core.http.models import User
-from rest_framework.test import APIClient
-from rest_framework import status
 from django.urls import reverse
+from rest_framework import status
+from rest_framework.test import APIClient
 
 from core.apps.accounts.serializers import ChangePasswordSerializer
+from core.http.models import User
 
 
 class ChangePasswordViewTest(TestCase):

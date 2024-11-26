@@ -1,7 +1,8 @@
-from unfold.admin import ModelAdmin
-from modeltranslation.admin import TabbedTranslationAdmin
 from django.contrib import admin
-from ..models import BannerModel, GenreModel, DirectorModel, CommentModel
+from modeltranslation.admin import TabbedTranslationAdmin
+from unfold.admin import ModelAdmin
+
+from ..models import BannerModel, CommentModel, DirectorModel, GenreModel
 
 
 class BannerAdmin(ModelAdmin):

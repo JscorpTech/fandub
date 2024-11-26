@@ -1,6 +1,7 @@
 from django import forms
-from ..models import FilmModel
 from django_ckeditor_5.widgets import CKEditor5Widget
+
+from ..models import FilmModel
 
 
 class FilmForm(forms.ModelForm):

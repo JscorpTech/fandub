@@ -1,8 +1,9 @@
-from unfold.admin import ModelAdmin
-from ..models import FilmModel
 from django.contrib import admin
 from modeltranslation.admin import TabbedTranslationAdmin
+from unfold.admin import ModelAdmin
+
 from ..forms import FilmForm
+from ..models import FilmModel
 
 
 class FilmAdmin(ModelAdmin, TabbedTranslationAdmin):

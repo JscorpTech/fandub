@@ -2,12 +2,13 @@
 Base celery tasks
 """
 
+from importlib import import_module
+
 from celery import shared_task
 from django.utils.translation import gettext as _
 
-from core.utils import console
-from importlib import import_module
 from config.env import env
+from core.utils import console
 
 
 @shared_task

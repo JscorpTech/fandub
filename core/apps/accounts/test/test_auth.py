@@ -1,15 +1,15 @@
+import logging
 from unittest.mock import patch
 
 from django.test import TestCase
 from django.urls import reverse
+from pydantic import BaseModel
 from rest_framework import status
 from rest_framework.test import APIClient
 
-from core.apps.accounts.models import User, ResetToken
-from core.services import SmsService
-from pydantic import BaseModel
-import logging
+from core.apps.accounts.models import ResetToken, User
 from core.http.models import SmsConfirm
+from core.services import SmsService
 
 
 class TokenModel(BaseModel):

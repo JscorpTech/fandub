@@ -1,7 +1,8 @@
-from unfold.admin import ModelAdmin
-from ..models import CategoryModel
 from django.contrib import admin
 from modeltranslation.admin import TabbedTranslationAdmin
+from unfold.admin import ModelAdmin
+
+from ..models import CategoryModel
 
 
 class CategoryAdmin(ModelAdmin, TabbedTranslationAdmin):

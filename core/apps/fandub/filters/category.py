@@ -1,7 +1,8 @@
 from typing import Any
+
 from django.db.models.query import QuerySet
-from unfold.contrib.filters.admin import DropdownFilter
 from django.utils.translation import gettext_lazy as _
+from unfold.contrib.filters.admin import DropdownFilter
 
 
 class CategoryFilter(DropdownFilter):
